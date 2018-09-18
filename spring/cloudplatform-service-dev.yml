@@ -1,7 +1,7 @@
 mybatis-plus:
   # 配置扫描xml
   mapper-locations:
-    - classpath:mappers/*.xml
+    - classpath:mapper/*.xml
   # 实体扫描，多个package用逗号或者分号分隔
   type-aliases-package: com.hq.cloudplatform.service.entity
   global-config:
