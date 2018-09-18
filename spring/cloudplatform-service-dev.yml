@@ -1,0 +1,12 @@
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+#     client-id: webApp
+#     client-secret: webApp
+      access-token-uri: http://127.0.0.1:9091/auth/oauth/token    #网关的地址
+      user-authorization-uri: http://127.0.0.1:9091/auth/oauth/authorize
+    resource:
+      user-info-uri:  http://127.0.0.1:9092/user     #认证中心地址
+#      prefer-token-info: false
