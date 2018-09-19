@@ -41,3 +41,14 @@ mybatis-plus:
     logic-delete-value: 0
     logic-not-delete-value: 1
     sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+    
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      access-token-uri: http://127.0.0.1:9091/auth/oauth/token    #网关的地址
+      user-authorization-uri: http://127.0.0.1:9091/auth/oauth/authorize
+    resource:
+      user-info-uri:  http://127.0.0.1:9092/user
+      prefer-token-info: false
