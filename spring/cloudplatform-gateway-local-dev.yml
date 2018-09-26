@@ -23,7 +23,7 @@ zuul:
       path: /user/**
       strip-prefix: true
       sensitiveHeaders:
-      serviceId: cloudplatform-user-local
+      serviceId: cloudplatform-upms
 security:
   basic:
     enabled: false
