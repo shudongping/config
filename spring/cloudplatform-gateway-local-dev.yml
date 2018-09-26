@@ -19,8 +19,8 @@ zuul:
       strip-prefix: true
       sensitiveHeaders:
       serviceId: cloudplatform-auth-local
-    user:
-      path: /user/**
+    upms:
+      path: /upms/**
       strip-prefix: true
       sensitiveHeaders:
       serviceId: cloudplatform-upms
