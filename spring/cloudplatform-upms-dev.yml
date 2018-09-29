@@ -46,9 +46,6 @@ security:
     client:
       access-token-uri: http://127.0.0.1:9091/auth/oauth/token    #网关的地址
       user-authorization-uri: http://127.0.0.1:9091/auth/oauth/authorize
-      client-id: web
-      client-secret: web
-      scope: server123
     resource:
-      user-info-uri:  http://127.0.0.1:902/user
+      user-info-uri:  http://127.0.0.1:9092/user
       prefer-token-info: false
