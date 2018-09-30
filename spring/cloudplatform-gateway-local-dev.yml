@@ -8,6 +8,9 @@ zuul:
   host:
     connect-timeout-millis: 60000
     socket-timeout-millis: 60000
+   #开启全局重试机制
+  retryable: true
+  servelt-path: /
   routes:
     service:
       path: /test/**
@@ -36,6 +39,18 @@ security:
     resource:
       user-info-uri:  http://127.0.0.1:9092/user
       prefer-token-info: false
+
+cloudplatform-service-local:
+#设置ribbon的请求超时时间，大文件上传必须调高此时间
+  ribbon:
+    ConnectTimeout: 60000
+    ReadTimeout: 20000
+    #同一个Server重试的次数(除去首次)
+    MaxAutoRetries: 3
+    #切换到不同Server的次数
+    MaxAutoRetriesNextServer: 3
+    #对所有方法进行重试
+    okToRetryOnAllOperations: true
 
 hystrix:
   command:
