@@ -4,6 +4,11 @@ spring:
     port: 5672
     username: guest
     password: guest
+  http:
+    multipart:
+      file-size-threshold: 1Mb
+      max-file-size: 1000Mb
+      max-request-size: 1000Mb
 zuul:
   host:
     connect-timeout-millis: 60000
