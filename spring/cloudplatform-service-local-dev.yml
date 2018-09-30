@@ -1,4 +1,12 @@
 spring:
+  http:
+    multipart:
+    #文件上传刷盘操作，没上传1M进行刷盘，防止内存溢出
+      file-size-threshold: 1Mb
+      #最大文件上传大小
+      max-file-size: 1000Mb
+      #文件上传文件请求限制
+      max-request-size: 1000Mb
   rabbitmq:
     host: 119.27.191.252
     port: 5672
