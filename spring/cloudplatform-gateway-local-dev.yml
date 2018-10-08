@@ -63,7 +63,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 6000
+            timeoutInMilliseconds: 60000
 #启动feign熔断器功能
 feign:
   hystrix:
